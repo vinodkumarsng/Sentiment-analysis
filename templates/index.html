@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Sentiment Analysis</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Sentiment Analysis</h1>
+        <center>
+            <form action="{{ url_for('index') }}" method="post">
+                <input type="text" name="msg" placeholder="Tweet" required="required" </label>
+                <p>NLP type</p>
+                <p>
+                    <label><input type="radio" name="type" value="tfidf" />TF IDF</label>
+                    <label><input type="radio" name="type" value="bow" />Bag of Words</label>
+                </p>
+
+                <button type="SUBMIT" class="btn btn-primary btn-block btn-large">Analyze</button>
+
+            </form>
+            <h3>{{ rrr }}</h3>
+
+        </center>
+</body>
+
+</html>
